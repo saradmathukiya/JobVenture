@@ -16,13 +16,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-const allowedOrigins = [
-  "https://jobventure.vercel.app", // Production
-  "http://localhost:5173", // Local development
-];
-
 const corsOptions = {
-  origin: allowedOrigins,
+  origin: "*",
   credentials: true,
 };
 
